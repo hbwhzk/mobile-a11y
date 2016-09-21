@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html lang="Zh_CN">
+	<head>
+		<meta charset="utf-8">
+		<title>移动应用的无障碍</title>
+		<meta name="description" content="移动应用的无障碍">
+		<meta name="author" content="张昆">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- Printing and PDF exports -->
+
+		<script>
+						var link = document.createElement( 'link' );
+							link.rel = 'stylesheet';
+							link.type = 'text/css';
+							link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+							document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script><!--[if lt IE 9]>
+					<script src="lib/js/html5shiv.js"></script>
+					<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<img width="185" height="100" style="position: fixed; bottom: 10px; left: 10px;"  src="pic/SIAA_logo.png" alt="研究会 logo" data-background-transition="zoom">
+		
+		
+		<div class="slides">
+			<section data-transition="convex">		
+				<h1>移动应用的无障碍</h1>
+				<p>张昆 @<a href="http://siaa.org.cn/">SIAA</a>  </p>
+				<p><a href="mailto:zhangkun@siaa.org.cn">zhangkun@siaa.org.cn</a><p>
+			</section> <!-- 封面 -->
+
+
+			<section  data-transition="convex" id="fragments">
+				<h2>信息无障碍 -- Accessibility</h2>
+				<img src="pic/accessibility.gif" alt="logo 1">
+				<p>任何人在任何情况下都能平等的、便利、无障碍地获取信息、利用信息。</p>
+				<p class="fragment">
+				信息的无障碍 --
+				不是一种行为或状态，而是指：访问信息的自由选择和使用权利。</p>
+			</section> <!-- Slides for introduction -->
+
+			<section data-transition="convex">
+				<section data-transition="convex">
+					<h2>为什么我们应该考虑信息无障碍</h2>
+					<img src="pic/a11y.jpg" alt="无障碍的意义">
+					<ul>
+						<li>增加用户基数</li>
+						<li>遵循无障碍规范、法规</li>
+						<li>通用性、人性化、易用性思维</li>
+					</ul>
+				</section>
+				
+				<section data-transition="convex">
+					<h3>残障人士</h3>
+					<p>在中国，有超过8000万的残障人士</p>
+					<img src="pic/accessibility.png" alt="logo 2">				
+				</section>
+				
+				<section data-transition="convex">
+					<p>弱势群体与环境制约</p>
+					<ul>
+						<li>2.1亿老龄化人口</li>
+						<li>5%-10%的读写障碍人群</li>
+						<li>第二语言人群</li>
+						<li>低教育程度</li>
+						<li>受环境制约</li>
+					</ul>
+				</section>
+
+				<section data-transition="convex">
+					<p>信息鸿沟，以及种类繁多的互联网产品：</p>
+					<ul>
+						<li>9亿活跃移动设备</li>
+						<li>网络不通达</li>
+						<li>对互联网产品不熟悉</li>
+					</ul>
+				</section>
+				
+				<section data-transition="convex">
+					<h2>国际无障碍法规</h2>
+					<blockquote>促进残疾人获得信息，以无障碍的形式向残疾人提供及时的公共信息，鼓励大众媒体、因特网信息提供商向残疾人提供无障碍服务
+					</blockquote>	
+					<p align="center">- 摘自 联合国<a href="http://www.un.org/chinese/disabilities/convention/index.htm">《残疾人权利国际公约》</a></p>
+				</section>
+			
+				<section data-transition="convex">
+					<h2>《残疾人权利国际公约》</h2>
+					<ul>
+						<li>2006年12月通过，2008年5月生效</li>
+						<li>其宗旨：<br>--- 促进、保护、确保所有残疾人充分平等地享有一切人权和基本自由</li>
+						<li>全世界已有164个国家批准和加入《公约》</li>	
+					</ul>
+				</section>
+			
+				<section data-transition="convex">
+					<h3>公约原则</h3>
+					<ol>
+						<li>尊重个人自由</li>
+						<li>不歧视</li>
+						<li>参与和融入社会</li>
+						<li>尊重差异</li>
+						<li>机会均等</li>
+						<li>无障碍</li>
+						<li>男女平等</li>
+						<li>残障儿童的能力发展</li>		
+					</ol>	
+				</section>
+			
+				<section data-transition="convex">
+					<h2><a href="https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards">Section 508</a> - 美国</h2>
+					<ul>
+						<li>源于康复法案</li>
+						<li>规定联邦政府应采用各类无障碍技术</li>
+						<li>细致说明信息产品应该具有的无障碍特性</li>
+						<li>提供了诉讼依据</li>
+					</ul>
+				</section>
+				
+				<section data-transition="convex">
+					<h2>其它国家和地区</h2>
+					<ul>
+						<li>20+国家和地区有无障碍标准、技术规范、法律法规；</li>
+						<li>以政府、公共服务为主要约束对象；</li>
+						<li>以 WCAG 2.0 (Web内容无障碍指南) 作为蓝本指定规范；</li>
+					</ul><br>
+					<p class="fragment" data-fragment-index="1">欧盟：<a href="http://ec.europa.eu/ipg/standards/accessibility/wcag-20/standard_wcag_en.htm">Web accessibility policy</a> 
+					<span class="fragment" data-fragment-index="2">--- 法国：<a href="http://references.modernisation.gouv.fr/rgaa-3-0">RGAA 3</a></span>
+					<span class="fragment" data-fragment-index="3">--- 德国：<a href="http://www.gesetze-im-internet.de/bitv_2_0/index.html">BITV 2</a></span>
+					<span class="fragment" data-fragment-index="4">--- 意大利：<a href="https://en.wikipedia.org/wiki/Stanca_Act">Law No. 4/2004 (Stanca Law)</a></span>
+					<span class="fragment" data-fragment-index="5">--- 爱尔兰：<a href="http://universaldesign.ie/Technology-ICT/Guidance-for-Online-Public-Services/Guidance-for-Online-Public-Services-1.pdf">Universal Design Guidance for Online Public Services 2.10</a></span>
+					<span class="fragment" data-fragment-index="6">--- 日本：<a href="http://waic.jp/docs/jis2016/compliance-guidelines/201603/">X 8341-3:2016</a></span>
+					<span class="fragment" data-fragment-index="7">--- 印度：<a href="http://web.guidelines.gov.in/">Guidelines for Indian Government Websites</a></span>
+					<span class="fragment" data-fragment-index="8">--- 香港：<a href="http://www.gov.hk/en/about/accessibility/accessibilityfeatures.htm">GovHK websites</a></span>
+					<span class="fragment" data-fragment-index="9">--- 澳大利亚：<a href="http://www.hreoc.gov.au/disability_rights/standards/www_3/www_3.html">Disability Discrimination Act</a></span>
+					<span class="fragment" data-fragment-index="10">--- 以色列：<a href="http://index.justice.gov.il/Units/NetzivutShivyon/Kvatzim/1395_Teken5568NegishutAtareiInternet.pdf">Israeli Standard 5568</a></span>
+				</section>					
+			 </section> <!-- Slides for WHY -->
+
+  
+
+			<section data-transition="convex">
+				<section data-transition="convex">
+					<h2>W3C 标准</h2>
+					<p><a href="http://www.w3.org/TR/WCAG20/">WCAG （Web Content Accessibility Guidelines）2.0</a></p>
+					<p>中文授权翻译:<a href="https://www.w3.org/Translations/WCAG20-zh/">Web内容无障碍指南(WCAG)2.0</a></p>
+					<ul>
+						<li>W3C推荐标准，同时也是ISO标准;</li>
+						<li>广泛运用在Web内容、应用与及网站运营;</li>
+						<li>前瞻性的设计思路;</li>
+						<li>可运用在软件、移动设备等；</li>
+					</ul>
+				</section>
+
+				<section data-transition="convex">
+					<h3>WCAG 2.0 支持文档</h3>
+					<ul>
+						<li><a href="https://www.w3.org/Translations/WCAG20-zh/">Web内容无障碍指南(WCAG)2.0 -- 中文授权翻译</a></li>
+						<li><a href="http://www.w3.org/WAI/WCAG20/quickref/">如何符合WCAG 2.0 （How to Meet WCAG 2.0）</a></li>
+						<li><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/">理解WCAG 2.0 （Understanding WCAG 2.0）</a></li>
+						<li><a href="http://www.w3.org/TR/WCAG20-TECHS/">WCAG 2.0 技巧 （Techniques for WCAG 2.0）</a></li>
+					</ul>
+				</section>		
+				
+				<section data-transition="convex">
+					<h2>W3C 标准</h2>
+					<p><a href="http://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)1.0</a></p>
+					<p>可及性富互联网应用1.0，让动态Web内容更无障碍</p>
+					<ul>
+						<li>定义了可以描述widget和网页结构的角色</li>
+						<li>拖拽类的资源、目标的属性界定</li>
+						<li>为Web对象和事件提供键盘导航</li>
+					</ul>
+				</section>
+				
+				<section data-transition="convex">
+					<h3>WAI-ARIA 1.0 支持文档</h3>
+					<ul>
+						<li><a href="http://www.w3.org/TR/wai-aria-implementation/">用户代理实施向导 User Agent Implementation Guide</a></li>
+						<li><a href="http://www.w3.org/tr/wai-aria-practices/">WAI-ARIA 创作实践 WAI-ARIA 1.0 authoring practices</a></li>
+						<li><a href="http://www.w3.org/TR/wai-aria-primer/">WAI-ARIA 初级读本 WAI-ARIA Primer</a></li>
+						<li><a href="http://www.w3.org/TR/wai-aria-roadmap/">WAI-ARIA 发展计划 WAI-ARIA Roadmap</a></li>
+					</ul>
+				</section>		
+
+				<section data-transition="convex">
+					<h3>移动端编程指南 </h3>
+					<ul>
+						<li><a href="https://developer.android.com/guide/topics/ui/accessibility/index.html">Android：Accessibility</a></li>
+						<li><a href="https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/iPhoneAccessibility/Introduction/Introduction.html">Accessibility Programming Guide for iOS</a></li>
+					</ul>
+				</section>
+				
+			</section> <!-- Slides for guideline and standard -->
+			
+			<section data-transition="convex">
+				<section data-transition="convex">
+					<h2>信息无障碍的四大原则</h2>
+					<ul>
+						<li>可感知</li>
+						<li>可操作</li>
+						<li>可理解</li>
+						<li>鲁棒性</li>
+					</ul>
+				</section>
+
+				<section data-transition="convex">
+					<p>可感知：信息和用户界面组件以可感知的方式呈现给用户</p>
+					<ul>
+						<li>替代文本 -- 为非文本内容提供替代文本</li>
+						<li>时基媒体 -- 为时基媒体提供替代</li>
+						<li>适应性 -- 创建可用不同方式呈现的内容</li>
+						<li>可辨别 -- 让用户通过视觉或听觉接受信息</li>
+					</ul>
+				</section>
+
+				<section data-transition="convex">
+					<p>可操作：用户界面上的组件和导航是可以操作的</p>
+					<ul>
+						<li>键盘可访问 -- 能通过键盘操作所有功能</li>
+						<li>充足的时间 -- 为用户提供足够的时间</li>
+						<li>癫痫 -- 不要设计会导致癫痫发作的内容</li>
+						<li>可导航性 -- 帮助用户导航、查找内容、确定位置</li>
+					</ul>
+				</section>
+
+				<section data-transition="convex">
+					<p>可理解：信息和用户界面操作必须是可理解的</p>
+					<ul>
+						<li>可读 -- 文本内容可读可理解</li>
+						<li>可预测 -- 以可预见的方式呈现内容</li>
+						<li>辅助输入 -- 帮助用户避免和纠正错误</li>
+					</ul>
+				</section>
+
+				<section data-transition="convex">
+					<p>鲁棒：内容可被各种用户代理所理解</p>
+					<ul>
+						<li>兼容 -- 兼容各类的用户代理</li>
+					</ul>
+				</section>
+			</section>
+
+			<section data-transition="convex">
+				<section data-transition="convex">
+					<h2>Tips - 设计</h2>
+					<ul>
+						<li>注意文字和背景色的对比度 4.5：1</li>
+						<li>不要单独使用颜色表达特别含义</li>
+						<li>控件触摸尺寸应该不小于7mm</li>
+						<li>如系统支持缩放，不要强制禁止</li>
+						<li>交互元素清晰可辩识</li>
+						<li>焦点可视化</li>
+						<li>组件的一致性</li>
+					</ul>
+				</section>
+				
+				<section data-transition="convex">
+					<h3>设计案例</h3>
+					<p>不要强制禁止缩放</p>
+					<img src="pic/d_1.jpg" alt="案例图一" width="145" height="258">
+					<img src="pic/d_2.jpg" alt="案例图二" width="145" height="258">	
+					<pre>
+					<code class="html" data-trim>
+<!-- Bad code -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<!-- Good code -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+					</code>
+					</pre>
+				</section>
+				
+				<section data-transition="convex">
+					<h3>设计案例</h3>
+					<p>注意颜色的使用</p>
+					<img src="pic/d_3.jpg" alt="色盲眼中的伦敦地铁">				
+				</section>
+			</section>
+			
+			<section data-transition="convex">
+				<section data-transition="convex">
+					<h2>Tips - 焦点</h2>
+					<ul>
+						<li>可交互元素被聚集，不可交互元素不被聚集</li>
+						<li>注意键盘陷阱，保证控件可聚集</li>
+						<li>内容顺序应该有逻辑顺序</li>
+						<li>仅在移开元素时，触发触摸事件</li>
+						<li>支持替代的输入方法</li>
+					</ul>                
+				</section>
+				
+				<section data-transition="convex">
+					<h3>焦点案例</h3>
+					<p>iOS无障碍焦点和标签</p>	
+					<pre>
+					<code data-trim>
+[somethingAccessible setIsAccessibilityElement:YES];
+[somethingAccessible setAccessibilityLabel:NSLocalizedString(@"简短介绍",@"")];
+[somethingDecorative setIsAccessibilityElement:NO];
+					</code>
+					</pre>      
+					<p>android无障碍焦点</p>
+					<pre>
+					<code data-trim>
+<EditText ... 
+android:focusable="true">
+</EditText>
+					</code>
+					</pre>
+				</section>
+			</section>
+			
+			<section data-transition="convex">
+				<section data-transition="convex"> 
+					<h2>Tips - 通知、提示、警告</h2>
+					<ul>
+						<li>必要时，给读屏软件用户适当的提示</li>
+						<li>状态改变时，用户应该可以通过视觉或听觉了解</li>
+						<li>音频提示应有其它感官可接受的方式</li>
+						<li>提供清晰的错误提示</li>					
+					</ul>
+				</section>	
+			</section>
+			
+			<section data-transition="convex">
+				<section data-transition="convex">
+					<h2>Tips - 等效文本</h2>
+					<ul>
+						<li>为非文本内容提供等效文本</li>
+						<li>装饰性内容不应该被聚集</li>
+						<li>必要时，为元素提供恰当的角色说明</li>
+						<li>提供可被不同感官接受的验证码</li>
+					</ul>
+				</section>
+				
+				<section>
+				<p>android 等效文本</p>
+				<pre>
+					<code data-trim>
+<ImageView ...  android:contentDescription="保存" ></ImageView>
+<EditText ... android:hint="姓名（必填）"></EditText>		
+					</code>
+				</pre>
+				<p>HTML 等效文本</p>
+				<pre>
+					<code data-trim class="html">
+<!-- alt -->		
+<img src="sample/sample_1_1.jpg" alt="天安门">
+<!-- aria-label -->	
+<img src="sample/pic/sample_1_1.jpg" alt="" aria-label="天安门">
+<input type="text" aria-label="搜索" >
+					</code>
+				</pre>
+				</section>
+			</section>
+			
+			<section data-transition="convex"> 
+				<section data-transition="convex">
+					<h2>Tips - 音视频</h2>
+					<ul>
+						<li>为多媒体提供字幕</li>
+						<li>如可能，提供手语</li>
+						<li>不要自动播放</li>
+					</ul>
+				</section>
+			</section>
+			
+			<section data-transition="convex">
+				<h2>谢谢</h2>
+			</section>
+
+		</div>
+		</div>
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
